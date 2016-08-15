@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Gentrification in Brooklyn</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Bree+Serif|Cuprum|Fjalla+One|Lora|Reem+Kufi|Roboto+Condensed|Signika|Slabo+27px|Yanone+Kaffeesatz" rel="stylesheet">
+  <link rel="stylesheet" href="stylesheet.css">
+  <STYLE TYPE="text/css"> <!-- P {text-indent: 30pt;} --> </STYLE>
+  <style>
+      html, body {
+        height: 80%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100%;
+      }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="gentrification code.html">Gentrification in New York City</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="gentrification code.html">Home</a></li>
+        <li><a href="gentrification tab.html">Gentrification</a></li>
+        <li><a href="experiences.html">Experiences</a></li>
+		<li class="active" class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Boroughs<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="bronx page.html">Bronx</a></li>
+			<li><a href="brooklyn page.html">Brooklyn</a></li>
+            <li><a href="manhattan1.html">Manhattan</a></li>
+			<li><a href="queens1.html">Queens</a></li>
+			<li><a href="staten1.html">Staten Island</a></li>
+          </ul>
+        </li>
+		<li><a href="trainlines.html">Train Lines</a></li>
+		<li><a href="forums tab.html"> Forums</a></li>
+		<li><a href="faq_tab.html">F.A.Q.</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+      </ul>
+	  	
+    </div>
+  </div>
+</nav>
+
+<center>
+<img id = "bushwickcollective" src = "bushwickcollective.jpg"/>
+</center>
+<center>
+<h3>Brooklyn</h3>
+</center>
+<body>
+<body topmargin="50">
+<body leftmargin="50">
+
+<p>
+	Brooklyn is the borough that caters to everybody as it’s a borough of diversity. It’s where you can get as many cultures as Manhattan has but with a friendlier vibe along with it. Brooklyn has different neighborhoods to fit different kinds of people. There’s Williamsburg which is often referred to as a hipster haven. You have Park Slope which is like stroller central because you can’t go on any block without seeing a stroller- it’s perfect if you like a family oriented neighborhood though. Brooklyn is not all housing and stores though, this borough has just as great of a view as Manhattan does.
+
+</p><br>
+<center>
+<h3>How Gentrification is Affecting Brooklyn</h3>
+</center>
+<p>
+If you visit Brooklyn now you’ll see a clash between neighborhoods or even in a neighborhood itself. 
+Gentrification in Brooklyn is at an all time high right now because of the constant renovations and flippings on affordable houses in affordable neighborhoods. 
+Due to this you’ll most likely see a clash between Brownstones and more modern buildings. 
+“...The drawbacks of this flipping craze are plentiful. Inflated housing prices lead to displacement and rapid gentrification -- properties that were once family-owned homes become instead income-generating investments for developers who typically divide them into apartments and charge high rents.” 
+Emily Nonko, Curbed New York. Which is terrible because it’s causing the original people in the neighborhoods to have to look for somewhere else to live because they can no longer afford their apartments/houses. 
+That’s not the only problem that this rapid method of gentrification is causing because as Emily Nonko of Curbed New York stated “It's also jacking up the sales prices for houses, especially in Brooklyn. In 2015, the median prices of homes pre-flip were affordable to a family making around 95 percent of the Area Median Income. Post flip, the median prices were only "affordable" to a family making 163 percent of AMI (Area Median Income).” 
+She also quoted Christie Peale, the ‎executive director at Center for NYC Neighborhoods, who stated that “There’s a real rush to make money in our neighborhoods because you can get such a higher return here and what that’s doing is creating these false markets." 
+This just goes to show you how fast gentrification actually works and how it can change a borough.
+</p><br>
+
+<div id="map"></div>
+<script>
+
+      function initMap() {
+        var myLatLng = {lat: 40.678832, lng: -73.950677};		
+		var LatLng2 = {lat: 40.690321, lng: -73.927164};
+		var LatLng3 = {lat: 40.694504, lng: -73.956555};
+		var LatLng4 = {lat: 40.681562, lng: -73.978595};
+		var LatLng5 = {lat: 40.638523, lng: -74.015323};
+		var LatLng6 = {lat: 40.664828, lng: -73.956555};
+		var LatLng7 = {lat: 40.663918, lng: -73.915407};
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 13,
+          center: myLatLng,
+		  mapTypeId: google.maps.MapTypeId.HYBRID
+		  
+        });
+
+		
+		var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+		
+		var marker = new google.maps.Marker({
+		  position: myLatLng,
+		  map: map,
+		  icon: iconBase + 'schools_maps.png'
+		});
+		
+		marker.addListener('click', function() {
+          window.alert("Willamsburg/Greenpoint has seen a 78.7% increase in rent since 1990.");
+        });
+		
+		var marker2 = new google.maps.Marker({
+		  position: LatLng2,
+		  map: map,
+		  icon: iconBase + 'schools_maps.png'
+		});
+		
+		  marker2.addListener('click', function() {
+          window.alert("Bushwick has seen a 44.0% increase in rent since 1990.");
+        });
+		
+		var marker3 = new google.maps.Marker({
+		  position: LatLng3,
+		  map: map,
+		  icon: iconBase + 'schools_maps.png'
+		});
+		
+		  marker3.addListener('click', function() {
+          window.alert("Bedford Stuyvesant has seen a 36.1% increase in rent since 1990.");
+        });
+		
+		var marker4 = new google.maps.Marker({
+		  position: LatLng4,
+		  map: map,
+		  icon: iconBase + 'schools_maps.png'
+		});
+		
+		  marker4.addListener('click', function() {
+          window.alert("North Crown Heights/Prospect Heights has seen a 36.7% increase in rent since 1990.");
+        });
+		
+		var marker5 = new google.maps.Marker({
+		  position: LatLng5,
+		  map: map,
+		  icon: iconBase + 'schools_maps.png'
+		});
+		
+		  marker5.addListener('click', function() {
+          window.alert("Sunset Park has seen a 23.5% increase in rent since 1990.");
+        });
+		
+		var marker6 = new google.maps.Marker({
+		  position: LatLng6,
+		  map: map,
+		  icon: iconBase + 'schools_maps.png'
+		});
+		
+		  marker6.addListener('click', function() {
+          window.alert("South Crown Heights has seen a 18.1% increase in rent since 1990.");
+        });
+		
+		var marker7 = new google.maps.Marker({
+		  position: LatLng7,
+		  map: map,
+		  icon: iconBase + 'schools_maps.png'
+		});
+		
+		  marker7.addListener('click', function() {
+          window.alert("Brownsville/Ocean Hill has seen a 20.5% increase in rent since 1990.");
+        });
+
+
+
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6K3r3VHy4n4NYvPeYku-MXnKMFWa4dKA&callback=initMap">
+    </script>
+	
+</body><br>
+<br>
+</html>

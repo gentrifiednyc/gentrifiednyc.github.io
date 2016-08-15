@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Gentrification in Queens</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Bree+Serif|Cuprum|Fjalla+One|Lora|Reem+Kufi|Roboto+Condensed|Signika|Slabo+27px|Yanone+Kaffeesatz" rel="stylesheet">
+  <link rel="stylesheet" href="stylesheet.css">
+  <STYLE TYPE="text/css"> <!-- P {text-indent: 30pt;} --> </STYLE>
+   <style>
+      html, body {
+        height: 80%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100%;
+      }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Gentrification in New York City</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="gentrification code.html">Home</a></li>
+        <li><a href="gentrification tab.html">Gentrification</a></li>
+        <li><a href="experiences.html">Experiences</a></li>
+		<li class="active" class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Boroughs<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="bronx page.html">Bronx</a></li>
+			<li><a href="brooklyn page.html">Brooklyn</a></li>
+            <li><a href="manhattan1">Manhattan</a></li>
+			<li><a href="queens1.html">Queens</a></li>
+			<li><a href="staten1.html">Staten Island</a></li>
+          </ul>
+        </li>
+		<li><a href="trainlines.html">Train Lines</a></li>
+		<li><a href="forums tab.html"> Forums</a></li>
+		<li><a href="faq_tab.html">F.A.Q.</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+      </ul>
+	  	
+    </div>
+  </div>
+</nav>
+
+<center>
+<img id = "flushingmeadows" src = "flushingmeadows.jpg"/>
+</center>
+<center>
+<h3>Queens</h3>
+</center>
+<body>
+<body topmargin="50">
+<body leftmargin="50">
+
+<p>
+Queens might as well be called the cultural medley pot of New York City because there are many different types of cultures that are close together in this borough.
+ There are many immigrants from India, Bangladesh, Sri Lanka, the Caribbean, Nigeria, Brazil, Greece, and even some from the Middle East. 
+ Queens actually has the most diversified economy out of all the five boroughs. 
+ Queens is home to Rockaway Beach made famous by a song written by the Ramones in 1977. 
+ This borough is also home to the LaGuardia and JFK International Airports along with Kaufman Astoria Studios, Silvercup Studios, Aqueduct Racetrack, and Citi Field athletic stadium which is home to the the New York Mets baseball team and the US Open tennis tournament.
+ The borough has diverse housing, ranging from high-rise apartment buildings in the urban areas of western and central Queens, such as Jackson Heights, Flushing, Astoria, and Long Island City, to suburban neighborhoods in the eastern part of the borough such as Little Neck, Douglaston, and Bayside.
+
+</p><br>
+<center>
+<h3>How Gentrification is Affecting Queens</h3>
+</center>
+<p>
+Recently Queens has been getting it’s own slice in the pie that is gentrification as its median house values have been on a current steady rise. This is most likely due to the gentrification of Brooklyn- making housing in Brooklyn less affordable and housing in Queens more appealing to members of the upper class, a lot of house flipping has been going on in Queens as well attracting the appeal of more one percenters, Queens’ diversity has also proven as more of a reason for the upper class and college/grad students to move into the borough, and last but not least the proximity and time between Queens and Manhattan is more of a reason for commuters into the city to move to certain Queens neighborhoods. “As of 2015, the study showed that Queens neighborhoods such as South Jamaica, St. Albans and Springfield Gardens saw some of the most dramatic increases in property value. These neighborhoods experienced a total of 246 flips over the course of the year.”  Miguel Vasquez, QNS. This report shows that as many more houses in Queens are continuously flipped the property valuers in these neighborhoods will continue to see increases in the value. Queens is also seeing a big increase in their numbers of co-ops and housing areas as gentrification begins making it’s way into this borough.
+</p><br>
+
+<div id="map"></div>
+    <script>
+
+      function initMap() {
+        var myLatLng = {lat: 40.763373, lng: -73.910998};		
+		var LatLng2 = {lat: 40.715452, lng: -73.791910};
+		var LatLng3 = {lat: 40.752792, lng: -73.880130};
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 13,
+          center: myLatLng,
+		  mapTypeId: google.maps.MapTypeId.HYBRID
+		  
+        });
+
+		
+		var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+		var marker = new google.maps.Marker({
+		  position: myLatLng,
+		  map: map,
+		  icon: iconBase + 'schools_maps.png'
+		});
+		
+		marker.addListener('click', function() {
+          window.alert("Astoria has seen a 27.6% increase in rent since 1990.");
+        });
+		
+		var marker2 = new google.maps.Marker({
+		  position: LatLng2,
+		  map: map,
+		  icon: iconBase + 'schools_maps.png'
+		});
+		
+		  marker2.addListener('click', function() {
+          window.alert("Jamaica has been slowly experiencing the gentrification process.");
+        });
+		
+		var marker3 = new google.maps.Marker({
+		  position: LatLng3,
+		  map: map,
+		  icon: iconBase + 'schools_maps.png'
+		});
+		
+		  marker3.addListener('click', function() {
+          window.alert("Jackson Heights has been slowly experiencing the gentrification process.");
+        });
+
+
+
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6K3r3VHy4n4NYvPeYku-MXnKMFWa4dKA&callback=initMap">
+    </script>
+	
+</body><br>
+<br>
+
+</html>

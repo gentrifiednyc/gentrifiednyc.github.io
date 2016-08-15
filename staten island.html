@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Gentrification in the Bronx</title>
+    <style>
+      html, body {
+        height: 80%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+
+      function initMap() {
+        var myLatLng = {lat: 40.642702, lng: -74.079947};		
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 13,
+          center: myLatLng,
+		  mapTypeId: google.maps.MapTypeId.HYBRID
+		  
+        });
+
+		
+		var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+		var marker = new google.maps.Marker({
+		  position: myLatLng,
+		  map: map,
+		  icon: iconBase + 'schools_maps.png'
+		});
+		
+		marker.addListener('click', function() {
+          window.alert("St. George has slowly been experiencing the gentrification process.");
+        });
+		
+
+
+
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6K3r3VHy4n4NYvPeYku-MXnKMFWa4dKA&callback=initMap">
+    </script>
+  </body>
+</html>
